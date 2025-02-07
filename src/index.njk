@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Касети від інтерфільм</title>
+</head>
+<style>
+  /* Overall Page Styling */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: left;
+  }
+
+  /* Headings */
+  h1, h2, h3 {
+    font-weight: bold;
+    color: #222;
+    margin: 20px 0 10px;
+  }
+
+  /* Paragraphs */
+  p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: justify;
+  }
+
+  /* Links */
+  a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: #0055aa;
+    text-decoration: underline;
+  }
+
+  /* List Items */
+  ul, ol {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+
+  li {
+    padding: 5px 0;
+  }
+
+  /* Add subtle dividers */
+  li + li {
+    border-top: 1px solid #ddd;
+  }
+
+  /* Responsive Layout */
+  @media (max-width: 600px) {
+    body {
+      margin: 10px;
+    }
+    p, ul, ol {
+      max-width: 90%;
+    }
+  }
+</style>
+<body>
+  <p>База касет та VHS від концерну <a href="https://uk.wikipedia.org/wiki/%D0%86%D0%BD%D1%82%D0%B5%D1%80%D1%84%D1%96%D0%BB%D1%8C%D0%BC_(%D0%BA%D1%96%D0%BD%D0%BE%D0%B4%D0%B8%D1%81%D1%82%D1%80%D0%B8%D0%B1%27%D1%8E%D1%82%D0%BE%D1%80)">ІНТЕРФІЛЬМ Україна</a></p>
+  <p>Я багато годин розглядав ті касети та VCD на поличках магазинів і в каталогах. І мріяв як можна більше їх побачити.</p>
+  <p>На цій сторінці я дуже потихеньку щось набиваю: якісь данні, фотки, каталог такий. Хто має інфу, чи хоче відправити фото своїх касет і VCD - відправляйте <a href="https://www.youtube.com/@vechirni_anbernic">вечірньому анберніку все</a></p>
+  <ul>
+    {% for tape in tapes %}
+    <li><a href="/tape/{{ tape.id }}/">{{ tape.title_russian }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

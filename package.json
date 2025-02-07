@@ -1,0 +1,15 @@
+{
+    "name": "eleventy-wikipedia-style-site",
+    "version": "1.0.0",
+    "description": "Wikipedia-style site generated with Eleventy using Strapi data",
+    "main": "index.js",
+    "scripts": {
+        "start": "eleventy --serve",
+        "build": "eleventy"
+    },
+    "dependencies": {
+        "@11ty/eleventy": "^2.0.0",
+        "axios": "^1.0.0",
+        "dotenv": "^16.4.7"
+    }
+}

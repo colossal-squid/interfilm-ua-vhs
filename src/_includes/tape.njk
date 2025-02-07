@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ tape.title_russian }}</title>
+</head>
+<body>
+<div style="display: flex">
+
+<ul>
+    {% for cover in tape.cover %}
+    <li><img style="max-width: 400px;" src="http://localhost:1337{{ cover.url }}" alt="Cover Image"></li>
+    {% endfor %}
+  </ul>
+
+<div style="margin-left: 1em;">
+<h1>{{ tape.title_russian }} </h1>
+  <p><strong>Genre:</strong> {{ tape.genre }}</p>
+  <p><strong>Original Title:</strong> {{ tape.title_original }}</p>
+  <p><strong>Director:</strong> {{ tape.director }}</p>
+  <p><strong>Actors:</strong> {{ tape.actors }}</p>
+  <p><strong>Description:</strong> {{ tape.description }}</p>
+  <p><strong>Duration:</strong> {{ tape.duration }} minutes</p>
+  <p><strong>Year:</strong> {{ tape.year }}</p>
+  <p><strong>VHS:</strong> {{ tape.vhs }}</p>
+  <p><strong>DVD:</strong> {{ tape.dvd }}</p>
+  <p><strong>VCD1:</strong> {{ tape.vcd1 }}</p>
+  <p><strong>VCD2:</strong> {{ tape.vcd2 }}</p>
+  </div>
+</div>
+
+  
+  <a href="/">Back to list</a>
+</body>
+</html>
